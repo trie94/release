@@ -113,7 +113,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "f0197665606678d36074";
+/******/ 	var hotCurrentHash = "a6a5d43896eada75001c";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1231,7 +1231,7 @@ var Landing = /*#__PURE__*/function (_React$Component) {
         className: "landing-description"
       }, "Create a multi-lingual portfolio and share what languages and platforms your work is available in."), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         className: "primary landing-button"
-      }, "Sign up for beta")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      }, "Sign up for beta!!")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         className: "landing-img",
         src: _img_landing_png__WEBPACK_IMPORTED_MODULE_1__["default"]
       }));
