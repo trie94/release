@@ -1,0 +1,43 @@
+html {
+    font-family: "Inter", sans-serif;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-weight: 400;
+    height: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    padding: 3% 15%;
+    position: relative;
+    overflow: hidden;
+    height: 100% !important;
+}
+
+.main-text-color {
+    color: black;
+}
+
+.button-color {
+    color: #007AFF;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+// a:visited {
+//     color: gray;
+// }
+
+// a:hover {
+//     color: #007AFF;
+// }
+
+// a:active {
+//     color: #000;
+// }

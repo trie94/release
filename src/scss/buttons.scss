@@ -1,0 +1,26 @@
+.primary {
+  background-color: white;
+  border-color: #007AFF;
+  border-radius: 12px;
+  color: #007AFF;
+  padding: 14px;
+  align-self: center;
+  text-align: center;
+  font-weight: 600;
+}
+
+.translate {
+    color: black;
+    margin: 10px;
+    border: none;
+    align-self: center;
+    text-align: center;
+    background-color: white;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+    #signupforbeta{
+        display: none;
+    }
+}

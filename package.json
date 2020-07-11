@@ -1,0 +1,51 @@
+{
+  "name": "release",
+  "version": "1.0.0",
+  "description": "Create a multi-lingual portfolio and share what languages and platforms your work is available in.",
+  "main": "root.js",
+  "scripts": {
+    "dev": "rm -rf ./dist/* && webpack --mode development --config webpack.server.config.js && webpack --mode development --config webpack.dev.config.js && cp CNAME ./dist",
+    "prod": "rm -rf ./dist/* && webpack --mode production --config webpack.server.config.js && webpack --mode production --config webpack.prod.config.js && cp CNAME ./dist",
+    "start": "node ./dist/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trie94/release.git"
+  },
+  "keywords": [],
+  "author": "yein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trie94/release/issues"
+  },
+  "homepage": "https://github.com/trie94/release#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.6.0",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "react-hot-loader": "^4.12.21",
+    "react-router-dom": "^5.2.0",
+    "sass": "^1.12.0",
+    "sass-loader": "^9.0.0",
+    "style-loader": "^1.2.1",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-hot-middleware": "^2.25.0",
+    "webpack-node-externals": "^1.7.2"
+  }
+}

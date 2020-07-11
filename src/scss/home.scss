@@ -1,0 +1,70 @@
+.header{
+    padding: 11px 3%;
+    height: 40px;
+    align-items: center;
+}
+
+.header-right {
+    margin:auto 0;
+}
+
+.title-text {
+    font-weight: 600;
+    font-size: large;
+}
+
+.logo-img {
+    display: block;
+    margin: auto;
+    min-height: 50px;
+    max-height: 65px;
+}
+
+@media only screen and (max-width: 768px) {
+    .title,
+    .logo {
+        width: 100% !important;
+    }
+
+    .header {
+        height: 110px;
+    }
+
+    .landing {
+        &-row {
+            flex-wrap: wrap;
+        }
+        &-img {
+            width: 80%;
+            margin: auto;
+        }
+    }
+}
+
+.landing{
+    margin: auto 2em;
+    max-width: 460px;
+    &-row {
+        display: flex;
+        justify-content: space-between;
+        padding: 3% 15%;
+        position: relative;
+        overflow: hidden;
+        height: 100% !important;
+    }
+
+    &-title {
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 1em;
+    }
+    &-description {
+        margin: 1em 0;
+    }
+    &-img {
+        margin: 0 1em;
+    }
+    &-button {
+        margin: 1em 0;
+    }
+}
