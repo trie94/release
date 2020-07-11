@@ -13,7 +13,7 @@ class Landing extends React.Component {
                 <div className='landing'>
                     <div className='landing-title'>Reach global readers.</div>
                     <div className='landing-description'>Create a multi-lingual portfolio and share what languages and platforms your work is available in.</div>
-                    <button className='primary landing-button'>Sign up for beta!!</button>
+                    <button className='primary landing-button'>Sign up for beta</button>
                 </div>
                 <img className='landing-img' src={landingImage}></img>
             </div>
