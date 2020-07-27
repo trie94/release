@@ -2,12 +2,11 @@ import React from 'react'
 import './../../scss/home.scss'
 import './../../scss/buttons.scss'
 import { Link } from "react-router-dom";
+import { signInOrOut } from './../authentication/userAuthentication'
 
-// TODO: check if the user is already signed up for beta
-class Header extends React.Component {
+export default class Header extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {}
     }
 
     render() {
@@ -20,15 +19,9 @@ class Header extends React.Component {
                 </div>
                 <div className='header-right'>
                     <button className='translate'>한/A</button>
-                    <button className='primary' id='signupforbeta'>
-                        <Link to='/signup' className='button-color'>
-                            Sign up for beta
-                        </Link>
-                    </button>
+                    <button onClick={() => signInOrOut(this.props.loginCallback)} className='primary' id='signupforbeta'>{this.props.userLoginState}</button>
                 </div>
             </div>
         )
     }
 }
-
-export default Header

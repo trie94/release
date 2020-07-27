@@ -21,6 +21,9 @@
   "homepage": "https://github.com/trie94/release#readme",
   "dependencies": {
     "express": "^4.17.1",
+    "firebase": "^7.17.1",
+    "firebase-tools": "^8.6.0",
+    "npm": "^6.14.7",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },

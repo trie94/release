@@ -2,7 +2,8 @@ import './scss/style.scss'
 import Home from './js/home/home'
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
+import './js/firebaseSetup'
 
 if (process.env.NODE_ENV !== 'production') { console.log("dev mode") }
 
