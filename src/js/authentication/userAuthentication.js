@@ -1,13 +1,13 @@
 import * as firebase from "firebase/app"
-import "firebase/auth";
+import "firebase/auth"
 
 export const LogInStateEnum = {
     LOGIN: "Log out",
     LOGOUT: "Sign up for beta"
 }
 
-export let loginState = LogInStateEnum.LOGOUT;
-export let user;
+export let loginState = LogInStateEnum.LOGOUT
+export let user
 
 export function signIn(setLoginState) {
     let provider = new firebase.auth.GoogleAuthProvider()

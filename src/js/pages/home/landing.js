@@ -1,7 +1,7 @@
 import React from 'react'
-import landingImage from './../../img/landing.png'
-import './../../scss/images.scss'
-import { signInOrOut } from './../authentication/userAuthentication'
+import landingImage from './../../../img/landing.png'
+import './../../../scss/images.scss'
+import { signInOrOut } from '../../authentication/userAuthentication'
 
 export default class Landing extends React.Component {
     constructor(props) {

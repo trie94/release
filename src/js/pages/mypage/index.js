@@ -1,9 +1,8 @@
 import React from 'react'
-import Header from '../common/header'
-import Landing from './landing'
-import { loginState } from './../authentication/userAuthentication'
+import Header from './../../common/header'
+import { loginState } from '../../authentication/userAuthentication'
 
-export default class Home extends React.Component {
+export default class Mypage extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
@@ -16,7 +15,6 @@ export default class Home extends React.Component {
         return (
             <div>
                 <Header title="Release" userLoginState={this.state.userLoginState} loginCallback={this.setLoginState} />
-                <Landing userLoginState={this.state.userLoginState} loginCallback={this.setLoginState} />
             </div>
         )
     }

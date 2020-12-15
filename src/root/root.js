@@ -1,9 +1,10 @@
-import './scss/style.scss'
-import Home from './js/home/home'
+import './../scss/style.scss'
+import Home from '../js/pages/home'
+import Mypage from '../js/pages/mypage'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
-import './js/firebaseSetup'
+import '../js/firebase/firebaseSetup'
 
 if (process.env.NODE_ENV !== 'production') { console.log("dev mode") }
 
@@ -21,8 +22,8 @@ if (module.hot) {
 
 class Root extends React.Component {
     constructor(props) {
-        super(props);
-        this.state = {};
+        super(props)
+        this.state = {}
     }
 
     render() {
@@ -31,6 +32,7 @@ class Root extends React.Component {
         return (
             <Switch>
                 <Route exact path='/' component={Home} />
+                <Route exact path='/my-page' component={Mypage} />
                 <Redirect to='/' />
             </Switch>
         )
