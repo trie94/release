@@ -5,7 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const glob = require('glob');
 
 console.log('globbing');
-let files = glob.sync('./pages/**/index.js');
+let files = glob.sync('./src/js/pages/**/index.js');
 files = files.map(function (file) {
     let name = file;
     name = name.replace('/index.js', '');
