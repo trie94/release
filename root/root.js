@@ -28,11 +28,11 @@ class Root extends React.Component {
 
     render() {
         window.scrollTo(0, 0)
-
+        console.log("fuck you")
         return (
             <Switch>
                 <Route exact path='/' component={Home} />
-                <Route path='/my-page' component={Mypage} />
+                <Route path='/mypage' component={Mypage} />
                 <Redirect to='/' />
             </Switch>
         )
