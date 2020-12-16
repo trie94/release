@@ -1,6 +1,6 @@
-import './../scss/style.scss'
-import Home from '../js/pages/home'
-import Mypage from '../js/pages/mypage'
+import '../scss/style.scss'
+import Home from '../pages/home'
+import Mypage from '../pages/mypage'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
@@ -32,7 +32,7 @@ class Root extends React.Component {
         return (
             <Switch>
                 <Route exact path='/' component={Home} />
-                <Route exact path='/my-page' component={Mypage} />
+                <Route path='/my-page' component={Mypage} />
                 <Redirect to='/' />
             </Switch>
         )

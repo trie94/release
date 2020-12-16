@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from './../../common/header'
-import { loginState } from '../../authentication/userAuthentication'
+import Header from '../../js/common/header'
+import { loginState } from '../../js/authentication/userAuthentication'
 
 export default class Mypage extends React.Component {
     constructor(props) {
@@ -12,11 +12,11 @@ export default class Mypage extends React.Component {
     }
 
     render() {
-        console.log("my page")
+        console.log("my page!!!")
         return (
             <div>
                 <Header title="Release" userLoginState={this.state.userLoginState} loginCallback={this.setLoginState} />
-                <div>this is my page</div>
+                <div>this is my page!!!</div>
             </div>
         )
     }

@@ -1,7 +1,7 @@
 import React from 'react'
-import Header from '../../common/header'
+import Header from '../../js/common/header'
 import Landing from './landing'
-import { loginState } from '../../authentication/userAuthentication'
+import { loginState } from '../../js/authentication/userAuthentication'
 
 export default class Home extends React.Component {
     constructor(props) {
