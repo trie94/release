@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "deploy": "webpack --config webpack.prod.js && cd dist && git add --all && git commit -m \"deploy\" && git push origin gh-pages -f && cd .."
+    "deploy": "webpack --config webpack.prod.js && cd dist && git add --all && git commit -m \"$(git log '--format=format:%H' master -1)\" && git push origin gh-pages -f && cd .."
   },
   "repository": {
     "type": "git",
