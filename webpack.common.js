@@ -1,19 +1,21 @@
-const webpack = require('webpack');
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
-const glob = require('glob');
+const webpack = require('webpack')
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const CleanWebpackPlugin = require('clean-webpack-plugin')
+const glob = require('glob')
 
-console.log('globbing');
-let files = glob.sync('./src/js/pages/**/index.js');
+console.log('globbing')
+let files = glob.sync('./src/js/pages/**/index.js')
 files = files.map(function (file) {
-    let name = file;
-    name = name.replace('/index.js', '');
-    name = name.replace('./pages/', '');
-    name = name + '/index.html';
-    return name;
-});
-files.push('index.html');
+    let name = file
+    name = name.replace('/index.js', '')
+    name = name.replace('pages/', '')
+    name = name.replace('js/', '')
+    name = name.replace('./src/', '')
+    name = name + '/index.html'
+    return name
+})
+files.push('index.html')
 
 const htmlPlugins = files.map(function (file) {
     return new HtmlWebpackPlugin({
