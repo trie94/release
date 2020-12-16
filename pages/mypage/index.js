@@ -12,11 +12,10 @@ export default class Mypage extends React.Component {
     }
 
     render() {
-        console.log("my page!!!")
         return (
             <div>
                 <Header title="Release" userLoginState={this.state.userLoginState} loginCallback={this.setLoginState} />
-                <div>this is my page!!!</div>
+                <div>this is my page</div>
             </div>
         )
     }
