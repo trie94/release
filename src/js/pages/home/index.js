@@ -13,6 +13,7 @@ export default class Home extends React.Component {
     }
 
     render() {
+        console.log("worktree test")
         return (
             <div>
                 <Header title="Release" userLoginState={this.state.userLoginState} loginCallback={this.setLoginState} />
