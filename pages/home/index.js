@@ -1,28 +1,20 @@
 import React from 'react'
-import Header from '../../js/common/header'
-import Landing from './landing'
-import { loginState } from '../../js/authentication/userAuthentication'
+import FollowServiceTestImpl from '../../services/followService/FollowServiceTestImpl.ts'
+import testuserdb from '../../servicesTest/followService/testUsers.json'
 
 export default class Home extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            userLoginState: loginState
-        }
-        this.setLoginState = this.setLoginState.bind(this)
     }
 
     render() {
-        console.log("worktree test")
+        let followService = new FollowServiceTestImpl(testuserdb)
+        console.log(followService.follow("user_id_4", "user_id_1"))
+        // console.log(followService.follow("user_id_4", "user_id_2"))
         return (
             <div>
-                <Header title="Release" userLoginState={this.state.userLoginState} loginCallback={this.setLoginState} />
-                <Landing userLoginState={this.state.userLoginState} loginCallback={this.setLoginState} />
+                This is home.
             </div>
         )
-    }
-
-    setLoginState() {
-        this.setState({ userLoginState: loginState })
     }
 }

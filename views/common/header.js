@@ -2,7 +2,6 @@ import React from 'react'
 import '../../scss/home.scss'
 import '../../scss/buttons.scss'
 import { Link } from "react-router-dom"
-import { signInOrOut } from '../authentication/userAuthentication'
 
 export default class Header extends React.Component {
     constructor(props) {

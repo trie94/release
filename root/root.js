@@ -4,7 +4,9 @@ import Mypage from '../pages/mypage'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
-import '../js/firebase/firebaseSetup'
+import '../services/firebase/firebaseSetup'
+import { loginState } from '../services/authentication/userAuthentication'
+import Header from '../views/common/header'
 
 if (process.env.NODE_ENV !== 'production') { console.log("dev mode") }
 
@@ -23,18 +25,28 @@ if (module.hot) {
 class Root extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {}
+        this.state = {
+            userLoginState: loginState
+        }
+        this.setLoginState = this.setLoginState.bind(this)
     }
 
     render() {
         window.scrollTo(0, 0)
         return (
-            <Switch>
-                <Route exact path='/' component={Home} />
-                <Route path='/mypage' component={Mypage} />
-                <Redirect to='/' />
-            </Switch>
+            <div>
+                <Header title="Release" userLoginState={this.state.userLoginState} loginCallback={this.setLoginState} />
+                <Switch>
+                    <Route exact path='/' component={Home} />
+                    <Route path='/mypage' component={Mypage} />
+                    <Redirect to='/' />
+                </Switch>
+            </div>
         )
+    }
+
+    setLoginState() {
+        this.setState({ userLoginState: loginState })
     }
 }
 
