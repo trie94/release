@@ -1,6 +1,5 @@
 import React from 'react'
-import FollowServiceTestImpl from '../../services/followService/FollowServiceTestImpl.ts'
-import testuserdb from '../../servicesTest/followService/testUsers.json'
+import followService from '../../services/followService/FollowServiceTestImpl'
 
 export default class Home extends React.Component {
     constructor(props) {
@@ -8,7 +7,6 @@ export default class Home extends React.Component {
     }
 
     render() {
-        let followService = new FollowServiceTestImpl(testuserdb)
         console.log(followService.follow("user_id_4", "user_id_1"))
         // console.log(followService.follow("user_id_4", "user_id_2"))
         return (

@@ -5,10 +5,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const glob = require('glob')
 
 console.log('globbing')
-let files = glob.sync('./pages/**/index.js')
+let files = glob.sync('./pages/**/index.tsx')
 files = files.map(function (file) {
     let name = file
-    name = name.replace('/index.js', '')
+    name = name.replace('/index.tsx', '')
     name = name.replace('./pages/', '')
     name = name + '/index.html'
     return name
@@ -29,7 +29,7 @@ for (var i = 0; i < files.length; i++) {
 }
 
 module.exports = {
-    entry: ['./root/root.js'],
+    entry: ['./root/root.tsx'],
     output: {
         filename: 'bundle.js',
         path: path.resolve(__dirname, './dist'),
@@ -39,10 +39,17 @@ module.exports = {
 
     module: {
         rules: [{
-            test: /\.(js|ts)$/,
+            test: /\.js$/,
             exclude: /node_modules/,
             use: {
                 loader: 'babel-loader',
+            }
+        },
+        {
+            test: /\.(tsx|ts)$/,
+            exclude: /node_modules/,
+            use: {
+                loader: 'ts-loader',
             }
         },
         {
@@ -71,6 +78,9 @@ module.exports = {
                 }
             ]
         }]
+    },
+    resolve: {
+        extensions: [".ts", ".tsx", ".js", ".jsx"]
     },
     plugins: [
         new CleanWebpackPlugin(['dist/!(*CNAME)'], {

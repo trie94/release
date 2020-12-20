@@ -1,6 +1,6 @@
 
 import * as firebase from "firebase/app"
-import FollowService from "./FollowService"
+import { FollowService } from "./FollowService"
 
 export default class FollowServiceImpl implements FollowService {
     getFollowers(userId: string): string[] {

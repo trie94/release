@@ -1,5 +1,5 @@
 
-export default interface FollowService {
+export interface FollowService {
     // returns an array of follower user ids.
     getFollowers(userId: string): string[]
     // returns an array of followings of the user.
@@ -9,3 +9,6 @@ export default interface FollowService {
     // returns true if the current user successfully has unfollowed the input user. False otherwise.
     unfollow(userIdToUnfollow: string): boolean
 }
+
+export const USERS_KEY = "users"
+export const FOLLOWINGS_KEY = "followings"

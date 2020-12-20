@@ -1,8 +1,8 @@
 
-import FollowService from "./FollowService"
-import { FOLLOWINGS_KEY, USERS_KEY } from "./FollowServiceConsts"
+import { FollowService, FOLLOWINGS_KEY, USERS_KEY } from "./FollowService"
+import testuserDb from '../../servicesTest/followService/testUsers.json'
 
-export default class FollowServiceTestImpl implements FollowService {
+class FollowServiceTestImpl implements FollowService {
     private db: object
 
     constructor(jsonFile) {
@@ -55,3 +55,6 @@ export default class FollowServiceTestImpl implements FollowService {
         throw new Error("Method not implemented.")
     }
 }
+
+export const followService = new FollowServiceTestImpl(testuserDb)
+export default followService
