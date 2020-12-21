@@ -26,6 +26,8 @@
     "@babel/preset-typescript": "^7.12.7",
     "@types/node": "^14.14.14",
     "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.1.6",
     "@types/webpack-env": "^1.16.0",
     "babel-loader": "^8.1.0",
     "browserify-fs": "^1.0.0",

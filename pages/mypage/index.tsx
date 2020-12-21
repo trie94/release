@@ -1,7 +1,7 @@
-import React from 'react'
+import * as React from 'react'
 
-export default class Mypage extends React.Component {
-    constructor(props) {
+export default class Mypage extends React.Component<{}, {}> {
+    constructor(props: {}) {
         super(props)
     }
 

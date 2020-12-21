@@ -1,8 +1,8 @@
-import React from 'react'
+import * as React from 'react'
 import followService from '../../services/followService/FollowServiceTestImpl'
 
-export default class Home extends React.Component {
-    constructor(props) {
+export default class Home extends React.Component<{}, {}> {
+    constructor(props: {}) {
         super(props)
     }
 

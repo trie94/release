@@ -1,8 +1,8 @@
 import '../scss/style.scss'
 import Home from '../pages/home'
 import Mypage from '../pages/mypage'
-import React from 'react'
-import ReactDOM from 'react-dom'
+import * as React from 'react'
+import * as ReactDOM from 'react-dom'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import '../services/firebase/firebaseSetup'
 import Header from '../views/common/header'
@@ -17,12 +17,10 @@ if (module.hot) {
         oldRootElem.parentNode.insertBefore(newRootElem, oldRootElem)
         oldRootElem.parentNode.removeChild(oldRootElem)
     })
-} else {
-    // enableProdMode()
 }
 
 class Root extends React.Component<{}, {}> {
-    constructor(props) {
+    constructor(props: {}) {
         super(props)
     }
 

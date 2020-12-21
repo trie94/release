@@ -1,4 +1,4 @@
-import React from 'react'
+import * as React from 'react'
 import '../../scss/home.scss'
 import '../../scss/buttons.scss'
 import { Link } from "react-router-dom"
@@ -15,9 +15,8 @@ type HeaderState = {
 export default class Header extends React.Component<HeaderProps, HeaderState> {
     state = { loginState: userAuthenticationService.loginState }
 
-    constructor(props) {
+    constructor(props: HeaderProps) {
         super(props)
-
         this.setLoginState = this.setLoginState.bind(this)
         this.getText = this.getText.bind(this)
     }

@@ -12,3 +12,13 @@ export interface FollowService {
 
 export const USERS_KEY = "users"
 export const FOLLOWINGS_KEY = "followings"
+export type DB = {
+    [USERS_KEY]: {
+        [user_id: string]: {
+            first_name: string, last_name: string, email: string, is_creator: boolean
+        }
+    },
+    [FOLLOWINGS_KEY]: {
+        [user_id: string]: string[]
+    }
+}

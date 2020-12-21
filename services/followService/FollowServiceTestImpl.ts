@@ -1,12 +1,13 @@
 
-import { FollowService, FOLLOWINGS_KEY, USERS_KEY } from "./FollowService"
-import testuserDb from '../../servicesTest/followService/testUsers.json'
+import { FollowService, FOLLOWINGS_KEY, USERS_KEY, DB } from "./FollowService"
+const testuserDb = require('../../servicesTest/followService/testUsers.json')
+
 
 class FollowServiceTestImpl implements FollowService {
-    private db: object
+    private db: DB
 
-    constructor(jsonFile) {
-        this.db = JSON.parse(JSON.stringify(jsonFile))
+    constructor(jsonFile: object) {
+        this.db = JSON.parse(JSON.stringify(jsonFile)) as DB
         if (this.db == null || this.db == undefined) {
             throw new Error("Parsing error!")
         }
@@ -35,9 +36,7 @@ class FollowServiceTestImpl implements FollowService {
         let followers = this.db[FOLLOWINGS_KEY][userIdToFollow]
         if (followers == undefined || followers == null) {
             let followings = this.db[FOLLOWINGS_KEY]
-            let newFollowObject = {}
-            newFollowObject[userIdToFollow] = [userId]
-            Object.assign(followings, newFollowObject)
+            Object.assign(followings, { [userIdToFollow]: userId })
         } else {
             if (followers.includes(userId)) {
                 console.log("You are already following this person.")

@@ -9,7 +9,7 @@ class UserAuthenticationService {
     public userData: firebase.User = null
     public loginState: LoginStateEnum = LoginStateEnum.LOGOUT
 
-    signIn(setLoginState) {
+    signIn(setLoginState: () => void) {
         let provider = new firebase.auth.GoogleAuthProvider()
         firebase.auth().signInWithPopup(provider).then((result) => {
             console.log("welcome, " + result.user.displayName)
@@ -21,14 +21,14 @@ class UserAuthenticationService {
         })
     }
 
-    signOut(updateLoginState) {
+    signOut(updateLoginState: () => void) {
         firebase.auth().signOut();
         console.log("signed out")
         this.loginState = LoginStateEnum.LOGOUT
         updateLoginState()
     }
 
-    toggleState(callback) {
+    toggleState(callback: () => void) {
         if (this.loginState == LoginStateEnum.LOGOUT) {
             this.signIn(callback)
         } else {
