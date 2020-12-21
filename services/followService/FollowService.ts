@@ -1,9 +1,9 @@
 
 export interface FollowService {
     // returns an array of follower user ids.
-    getFollowers(userId: string): string[]
+    getFollowers(userId: string): string[] | null
     // returns an array of followings of the user.
-    getFollowing(userId: string): string[]
+    getFollowing(userId: string): string[] | null
     // returns true if the current user successfully has followed the input user. False otherwise.
     follow(userId: string, userIdToFollow: string): boolean
     // returns true if the current user successfully has unfollowed the input user. False otherwise.

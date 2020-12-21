@@ -13,9 +13,11 @@ if (module.hot) {
     module.hot.accept()
     module.hot.dispose(() => {
         const oldRootElem = document.querySelector('body')
-        const newRootElem = oldRootElem.cloneNode(false)
-        oldRootElem.parentNode.insertBefore(newRootElem, oldRootElem)
-        oldRootElem.parentNode.removeChild(oldRootElem)
+        const newRootElem = oldRootElem?.cloneNode(false)
+        if (newRootElem != null) {
+            oldRootElem?.parentNode?.insertBefore(newRootElem, oldRootElem)
+            oldRootElem?.parentNode?.removeChild(oldRootElem)
+        }
     })
 }
 

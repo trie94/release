@@ -13,7 +13,7 @@ class FollowServiceTestImpl implements FollowService {
         }
     }
 
-    getFollowers(userId: string): string[] {
+    getFollowers(userId: string): string[] | null {
         let followers = this.db[FOLLOWINGS_KEY][userId]
         if (followers == undefined || followers == null) {
             return null
@@ -22,7 +22,7 @@ class FollowServiceTestImpl implements FollowService {
         }
     }
 
-    getFollowing(userId: string): string[] {
+    getFollowing(userId: string): string[] | null {
         throw new Error("Method not implemented.");
     }
 

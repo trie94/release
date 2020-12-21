@@ -6,13 +6,13 @@ export enum LoginStateEnum {
 }
 
 class UserAuthenticationService {
-    public userData: firebase.User = null
+    public userData: firebase.User | null = null
     public loginState: LoginStateEnum = LoginStateEnum.LOGOUT
 
     signIn(setLoginState: () => void) {
         let provider = new firebase.auth.GoogleAuthProvider()
         firebase.auth().signInWithPopup(provider).then((result) => {
-            console.log("welcome, " + result.user.displayName)
+            console.log("welcome, " + result?.user?.displayName)
             this.saveUserData(result.user)
             this.loginState = LoginStateEnum.LOGIN
             setLoginState()
