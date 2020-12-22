@@ -3,7 +3,7 @@ import * as firebase from "firebase/app"
 const firebaseConfig = {
     apiKey: "AIzaSyBWVBtAk_PwNTUQk3gHfGewH2b6qBaiNZw",
     authDomain: "release-b0fef.firebaseapp.com",
-    databaseURL: "https://release-b0fef.firebaseio.com",
+    databaseURL: "https://release-b0fef.firebaseio.com/",
     projectId: "release-b0fef",
     storageBucket: "release-b0fef.appspot.com",
     messagingSenderId: "186071741213",

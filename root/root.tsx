@@ -1,10 +1,10 @@
+import '../services/firebase/firebaseSetup'
 import '../scss/style.scss'
 import Home from '../pages/home'
 import Mypage from '../pages/mypage'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
-import '../services/firebase/firebaseSetup'
 import Header from '../views/common/header'
 
 if (process.env.NODE_ENV !== 'production') { console.log("dev mode") }

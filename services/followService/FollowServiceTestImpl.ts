@@ -13,11 +13,12 @@ class FollowServiceTestImpl implements FollowService {
         }
     }
 
-    getFollowers(userId: string): string[] | null {
+    async getFollowers(userId: string, callback: () => void): Promise<any> {
         let followers = this.db[FOLLOWINGS_KEY][userId]
         if (followers == undefined || followers == null) {
             return null
         } else {
+            callback()
             return followers
         }
     }
@@ -26,7 +27,7 @@ class FollowServiceTestImpl implements FollowService {
         throw new Error("Method not implemented.");
     }
 
-    follow(userId: string, userIdToFollow: string): boolean {
+    async follow(userId: string, userIdToFollow: string): Promise<boolean> {
         if (userId == userIdToFollow) {
             console.log("Cannot follow self!")
             return false
@@ -38,11 +39,11 @@ class FollowServiceTestImpl implements FollowService {
             let followings = this.db[FOLLOWINGS_KEY]
             Object.assign(followings, { [userIdToFollow]: userId })
         } else {
-            if (followers.includes(userId)) {
+            if (followers[userId] != null || followers[userId] != undefined) {
                 console.log("You are already following this person.")
                 return false
             }
-            followers.push(userId)
+            followers[userId] = true
         }
 
         console.log(userId + " successfully followed " + userIdToFollow + "!")
@@ -50,7 +51,7 @@ class FollowServiceTestImpl implements FollowService {
         return true
     }
 
-    unfollow(userIdToUnfollow: string): boolean {
+    unfollow(userId: string, userIdToUnfollow: string): Promise<boolean> {
         throw new Error("Method not implemented.")
     }
 }
