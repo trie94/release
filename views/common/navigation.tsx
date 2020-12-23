@@ -6,7 +6,7 @@ import userAuthenticationService, { LoginStateEnum } from '../../services/authen
 import MenuItem from './menuitem'
 
 export enum MenuEnum {
-    HOME, SEARCH, PROFILE
+    HOME = "/", SEARCH = "/search", PROFILE = "/mypage"
 }
 
 type NavProps = {
@@ -21,7 +21,7 @@ type NavState = {
 export default class Navigation extends React.Component<NavProps, NavState> {
     state = {
         loginState: userAuthenticationService.loginState,
-        menuState: MenuEnum.HOME // this should be fixed.. there should be a global menu state instead of this.
+        menuState: window.location.pathname as MenuEnum
     }
 
     constructor(props: NavProps) {
