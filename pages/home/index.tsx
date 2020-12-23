@@ -1,6 +1,7 @@
 import * as React from 'react'
 // import followService from '../../services/followService/FollowServiceTestImpl'
 import followService from '../../services/followService/FollowServiceImpl'
+import Content from '../../views/common/content'
 
 export default class Home extends React.Component<{}, {}> {
     constructor(props: {}) {
@@ -18,9 +19,7 @@ export default class Home extends React.Component<{}, {}> {
         // })
 
         return (
-            <div>
-                This is home.
-            </div>
+            <Content text="this is main feed" />
         )
     }
 }

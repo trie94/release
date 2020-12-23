@@ -1,11 +1,11 @@
 import '../services/firebase/firebaseSetup'
-import '../scss/style.scss'
+import '../views/common/style.scss'
 import Home from '../pages/home'
 import Mypage from '../pages/mypage'
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
-import Header from '../views/common/header'
+import Navigation from '../views/common/navigation'
 
 if (process.env.NODE_ENV !== 'production') { console.log("dev mode") }
 
@@ -29,13 +29,17 @@ class Root extends React.Component<{}, {}> {
     render() {
         window.scrollTo(0, 0)
         return (
-            <div>
-                <Header title="Release" />
-                <Switch>
-                    <Route exact path='/' component={Home} />
-                    <Route path='/mypage' component={Mypage} />
-                    <Redirect to='/' />
-                </Switch>
+            <div className="container">
+                <div className="row">
+                    <Navigation title="Publang" />
+                    <div className="flex-columns">
+                        <Switch>
+                            <Route exact path='/' component={Home} />
+                            <Route path='/mypage' component={Mypage} />
+                            <Redirect to='/' />
+                        </Switch>
+                    </div>
+                </div>
             </div>
         )
     }

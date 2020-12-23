@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Content from '../../views/common/content'
 
 export default class Mypage extends React.Component<{}, {}> {
     constructor(props: {}) {
@@ -7,9 +8,7 @@ export default class Mypage extends React.Component<{}, {}> {
 
     render() {
         return (
-            <div>
-                <div>this is my page</div>
-            </div>
+            <Content text="this is my page" />
         )
     }
 }
