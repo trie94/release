@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Content from '../../views/common/content'
+import ProfileContent from '../../views/common/profilecontent'
 
 export default class Mypage extends React.Component<{}, {}> {
     constructor(props: {}) {
@@ -8,7 +8,7 @@ export default class Mypage extends React.Component<{}, {}> {
 
     render() {
         return (
-            <Content text="this is my page" />
+            <ProfileContent text="this is my page" />
         )
     }
 }

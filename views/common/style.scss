@@ -2,19 +2,17 @@
 
 html {
     font-family: map-get($map: $base, $key: font-family);
-    height: 100%;
     color: #2B273C;
 }
 
 body {
     margin: 0;
     font-weight: 400;
-    height: 100%;
 }
 
 #root {
-    height: 100%;
     margin: auto;
+    width: 100vh;
 }
 
 a:link {
@@ -34,12 +32,12 @@ a:link {
 // }
 
 .container {
-    box-sizing: border-box;
-    overflow-y: scroll;
-    padding: 1em;
-    width: 100%;
-    justify-content: center;
     display: flex;
+    justify-content: center;
+    // overflow:auto;
+    width: 100%;
+    height: 100vh;
+    margin: auto;
 }
 
 .flex-columns {  
@@ -49,20 +47,20 @@ a:link {
 
 .row {
     display: flex;
+    flex: 1 1 auto;
+    justify-content: flex-start;
     width: 100%;
-    justify-content: center;
-    // overflow: hidden;
 }
 
 .left-side-bar {
     background-color: rgb(247, 245, 240);
-    width: 15%;
     padding: 1em;
 
     .navigation {
-        max-width: 275px;
+        text-align: right;
         display:flex;
         flex-direction: column;
+        margin: 1em;
         
         .logo {
             padding: 0 0 2em 0;
@@ -87,17 +85,26 @@ a:link {
     background-color: rgb(255, 241, 215);
     min-width: 600px;
     padding: 1em;
+    overflow: auto;
     margin: 0 1em;
+}::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
 }
 
 .right-side-bar {
     background-color: rgb(247, 245, 240);
     padding: 1em;
-    width: 40%;
+    min-width: 275px;
+    width: 25%;
 }
 
 @media only screen and (max-width: 768px) {
     .right-side-bar {
         display: none;
+    }
+
+    .main {
+        width: 100%;
     }
 }

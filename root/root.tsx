@@ -30,16 +30,12 @@ class Root extends React.Component<{}, {}> {
         window.scrollTo(0, 0)
         return (
             <div className="container">
-                <div className="row">
-                    <Navigation title="Publang" />
-                    <div className="flex-columns">
-                        <Switch>
-                            <Route exact path='/' component={Home} />
-                            <Route path='/mypage' component={Mypage} />
-                            <Redirect to='/' />
-                        </Switch>
-                    </div>
-                </div>
+                <Navigation title="Publang" />
+                <Switch>
+                    <Route exact path='/' component={Home} />
+                    <Route path='/mypage' component={Mypage} />
+                    <Redirect to='/' />
+                </Switch>
             </div>
         )
     }
