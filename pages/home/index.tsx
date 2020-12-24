@@ -19,7 +19,9 @@ export default class Home extends React.Component<{}, {}> {
         // })
 
         return (
-            <Content text="this is main feed" />
+            <Content text="this is main feed">
+            </Content>
         )
     }
+
 }

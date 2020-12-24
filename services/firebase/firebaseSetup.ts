@@ -1,4 +1,5 @@
 import * as firebase from "firebase/app"
+import "firebase/storage"
 
 const firebaseConfig = {
     apiKey: "AIzaSyBWVBtAk_PwNTUQk3gHfGewH2b6qBaiNZw",
@@ -13,3 +14,13 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig)
 console.log("init firebase")
+
+export const storageRef = firebase.storage().ref()
+
+// service firebase.storage {
+//     match /b/{bucket}/o {
+//       match /{allPaths=**} {
+//         allow read, write: if request.auth != null;
+//       }
+//     }
+//   }

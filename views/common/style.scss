@@ -35,9 +35,9 @@ a:link {
 
 .container {
     box-sizing: border-box;
+    overflow-y: scroll;
     padding: 1em;
     width: 100%;
-    height: 100%;
     justify-content: center;
     display: flex;
 }
@@ -49,16 +49,16 @@ a:link {
 
 .row {
     display: flex;
-    height: 100%;
     width: 100%;
     justify-content: center;
-    overflow: hidden;
+    // overflow: hidden;
 }
 
 .left-side-bar {
     background-color: rgb(247, 245, 240);
     width: 15%;
     padding: 1em;
+
     .navigation {
         max-width: 275px;
         display:flex;

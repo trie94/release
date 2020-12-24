@@ -136,7 +136,7 @@ $button: (
   circle-diameter-sm:     $button-height-sm,
   circle-diameter-xs:     $button-height-xs,
 
-  font-weight:            map-get($base, font-weight-bold)
+  max-width: 768px
 );
 
 $image: (
