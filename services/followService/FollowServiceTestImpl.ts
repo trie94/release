@@ -13,12 +13,11 @@ class FollowServiceTestImpl implements FollowService {
         }
     }
 
-    async getFollowers(userId: string, callback: () => void): Promise<any> {
+    async getFollowers(userId: string): Promise<any> {
         let followers = this.db[FOLLOWINGS_KEY][userId]
         if (followers == undefined || followers == null) {
             return null
         } else {
-            callback()
             return followers
         }
     }

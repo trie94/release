@@ -1,7 +1,7 @@
 
 export interface FollowService {
     // returns an array of follower user ids.
-    getFollowers(userId: string, callback: () => void): Promise<any>
+    getFollowers(userId: string): Promise<string[]>
     // returns an array of followings of the user.
     getFollowing(userId: string): string[] | null
     // returns true if the current user successfully has followed the input user. False otherwise.

@@ -9,15 +9,22 @@ export default class Home extends React.Component<{}, {}> {
     }
 
     render() {
-        // let followers: string[] = []
-
-        // followService.getFollowers("user_id_3", (res) => {
-        //     followers = res
-        // }).then(() => {
-        //     let result = followService.follow("user_id_4", "user_id_1")
-        //     console.log(result)
+        // followService.unfollow("user_id_1", "user_id_2").then((res: boolean) => {
+        //     console.log("unfollowed?")
+        //     console.log(res)
         // })
-
+        //     .then(() => {
+        //         followService.follow("user_id_1", "user_id_2").then((res: boolean) => {
+        //             console.log("followed?")
+        //             console.log(res)
+        //         })
+        //     })
+        //     .then(() => {
+        //         followService.getFollowers("user_id_2").then((res: Promise<string[]>) => {
+        //             console.log("followers")
+        //             console.log(res)
+        //         })
+        //     })
         return (
             <Content text="this is main feed">
             </Content>
